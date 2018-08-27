@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post My Story</title>
+</head>
+<body>
+    <form method="POST">
+        @helper.CSRF.formField
+        <label for="place1">Name a Place:</label>
+        <input type="text" name="place1" id="place1"><br>
+
+        <label for="adjective1">An Adjective:</label>
+        <input type="text" name="adjective1" id="adjective1"><br>
+
+        <label for="noun1">A Noun:</label>
+        <select name="noun1" id="noun1"><br>
+            <option value="sandpaper">Sand Paper</option>
+            <option value="filet mignon">Filet Mignon</option>
+            <option value="hot tub">Hot Tub</option>
+        </select><br>
+
+        <label for="noun2">Another Noun:</label>
+        <input type="text" name="noun2" id="noun2"><br>
+
+        <label>A Past-Tense Verb:</label>
+        <input type="radio" name="verb1" id="verb1-1" value="fell"><label for="verb1-1">Fell</label>
+        <input type="radio" name="verb1" id="verb1-2" value="sharted" checked="checked"><label for="verb1-2">Sharted</label>
+        <input type="radio" name="verb1" id="verb1-3" value="limped"><label for="verb1-3">Limped</label><br>
+
+
+        <input type="submit" value="Generate Story">
+    </form>
+</body>
+</html>
